@@ -1,3 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Baumans&family=Be+Vietnam+Pro:wght@300&family=Bebas+Neue&family=Dancing+Script:wght@500&family=Inter:wght@400;600&family=Kumbh+Sans:wght@400;700&family=Lilita+One&family=Montserrat:ital,wght@0,740;1,740&family=Overpass:wght@580&family=Playfair+Display:ital,wght@0,437;1,437&family=Roboto+Mono:ital,wght@0,586;1,586&family=Sevillana&family=Tenali+Ramakrishna&family=Tillana:wght@500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+}
+.content{
+    font-family: "Roboto Mono", monospace;
+    text-shadow: 2px 2px 8px #00FF29;
+}
+.overlay{
+    font-family: "Roboto Mono", monospace;
+    background-color: rgba(0,0,0,0.5);
+}
+.log,.sign{
+    font-family: "Roboto Mono", monospace;
+}
+.log:hover{
+    
+    text-shadow: 2px 2px 8px #00FF29;
+}
+.sign:hover{
+    
+    text-shadow: 2px 2px 8px #00FF29;
+}
