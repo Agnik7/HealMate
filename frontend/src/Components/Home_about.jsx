@@ -15,123 +15,128 @@ import mic from "../assets/mic.png";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
+import { NavLink } from "react-router-dom";
 
 export default function Home_about() {
   return (
-    <div>
-      <div className="box  min-h-[110vh] sm:w-[80%] w-full flex flex-col justify-center items-center m-auto ">
+    <div className="box">
+      <div className="  min-h-[110vh] sm:w-[80%] w-full flex flex-col justify-center items-center m-auto ">
         <motion.p
-          className="text-[#ffffff] text-center w-full mb-[1.5rem] para"
+          className="text-[#ffffff] text-center w-full mb-[1.5rem] para md:text-[1.3rem] text-[1rem]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Say goodbye to the uncertainty of self-diagnosis and endless internet
-          searches. Our revolutionary platform utilizes advanced AI algorithms
-          to accurately diagnose health conditions based on your symptoms or
-          even a simple picture.
+          Uncertain symptoms? Snap a picture for a possible condition match, then find nearby doctors for the best next step!
+
         </motion.p>
-        <div className="info  flex  justify-center  items-center gap-[2rem] flex-wrap-reverse lg:flex-nowrap ">
-          <motion.div
-            className="left text-[#ffffff] text-center backdrop-blur p-[1rem] border-solid border-[2.3px] border-[#23B740] rounded-[2rem] m-[1rem] "
-            initial={{ opacity: 0.5, x: -500 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5 }}
-          >
-            <motion.div>
-              "Welcome to our revolutionary disease recognition platform! Simply
-              upload an image of your symptoms or provide the disease name, and
-              watch as our cutting-edge technology swiftly identifies the
-              ailment. But wait, there's more! With just a click, discover all
-              the nearby doctors specialized in treating your condition,
-              tailored to your location. Get the help you need, right at your
-              fingertips. Experience health care like never before!"
-            </motion.div>
-            <div className="w-full flex flex-col justify-center items-center gap-[1rem] m-[1rem]">
-              <button className="btn glass flex flex-row justify-center items-center text-center    text-[#ffffff] transition-all ease-linear duration-100  rounded-[2rem] p-[0.5rem] hover:text-[#000000] hover:bg-transparent hover:border-solid hover:border-[2px] hover:border-[#23B740]">
-                Discover by Snapping shots{" "}
-                <img src={camera} className="w-[2rem] text-[#000000]" />
-              </button>
-              <button className="btn glass flex flex-row justify-center items-center text-center    text-[#ffffff] transition-all ease-linear duration-100  rounded-[2rem] p-[0.4rem] hover:text-[#000000] hover:bg-transparent hover:border-solid hover:border-[2px] hover:border-[#23B740]">
-                Discover by disease name{" "}
-                <img src={mic} className="w-[2.5rem]" />
-              </button>
+        <div className="m-[1rem]  flex  md:justify-between justify-center flex-col items-center gap-[2rem]  ">
+          <div className="flex lg:flex-row flex-col lg:justify-between justify-center items-center   glass_one rounded-[2rem]">
+            <div className="text-[#ffffff] text-center glow m-[0.5rem] text-[1.3rem] md:w-[50%] w-[90%] ">
+              <p>
+                Perfectly analyse the image and provide the best medical support
+              </p>
+              <span className="flex justify-center items-center ">
+                <img src={camera} alt="img" className="w-[4rem]" />
+                <NavLink to="/pics" className="underline">Try it out</NavLink>
+              </span>
             </div>
-          </motion.div>
-          <motion.div
-            className="right   m-auto md:m-[1rem]   h-[30rem]"
-            initial={{ opacity: 0.5, x: 500 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5 }}
-          >
-            <Carousel
-              infiniteLoop={true}
-              autoPlay={true}
-              transitionTime={300}
-              dynamicHeight={true}
-              interval={2000}
-              showThumbs={false}
-            >
-              <div className="rounded-[2rem]">
-                <img src={pic} className="rounded-[1rem] w-[15rem] h-[30rem]" />
-              </div>
-              <div>
-                <img
-                  src={pic2}
-                  className="rounded-[1rem] w-[15rem] h-[30rem]"
-                />
-              </div>
-              <div>
-                <img
-                  src={pic3}
-                  className="rounded-[1rem] w-[15rem] h-[30rem]"
-                />
-              </div>
-              <div>
-                <img
-                  src={pic4}
-                  className="rounded-[1rem] w-[15rem] h-[30rem]"
-                />
-              </div>
-              <div>
-                <img
-                  src={pic5}
-                  className="rounded-[1rem] w-[15rem] h-[30rem]"
-                />
-              </div>
-              <div>
-                <img
-                  src={pic6}
-                  className="rounded-[1rem] w-[15rem] h-[30rem]"
-                />
-              </div>
-              <div>
-                <img
-                  src={pic7}
-                  className="rounded-[1rem] w-[15rem] h-[30rem]"
-                />
-              </div>
-              <div>
-                <img
-                  src={pic8}
-                  className="rounded-[1rem] w-[15rem] h-[30rem]"
-                />
-              </div>
-            </Carousel>
-          </motion.div>
+            <div className="lg:w-[30rem] ">
+              <Carousel
+                infiniteLoop={true}
+                autoPlay={true}
+                transitionTime={300}
+                dynamicHeight={true}
+                interval={2000}
+                showThumbs={false}
+              >
+                <div className="rounded-[2rem]">
+                  <img
+                    src={pic}
+                    className="rounded-[1rem] w-[15rem] h-[30rem]"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={pic2}
+                    className="rounded-[1rem] w-[15rem] h-[30rem]"
+                  />
+                  
+                </div>
+                <div>
+                  <img
+                    src={pic3}
+                    className="rounded-[1rem] w-[15rem] h-[30rem]"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={pic4}
+                    className="rounded-[1rem] w-[15rem] h-[30rem]"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={pic5}
+                    className="rounded-[1rem] w-[15rem] h-[30rem]"
+                  />
+                </div>
+              </Carousel>
+            </div>
+          </div>
+          <div className="flex lg:flex-row flex-col-reverse lg:justify-between justify-center items-center max-w-[80rem]  glass_one rounded-[0.7rem]">
+            <div className="lg:w-[30rem]">
+              <Carousel
+                infiniteLoop={true}
+                autoPlay={true}
+                transitionTime={300}
+                dynamicHeight={true}
+                interval={2000}
+                showThumbs={false}
+              >
+                <div>
+                  <img
+                    src={pic6}
+                    className="rounded-[1rem] w-[15rem] h-[30rem]"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={pic7}
+                    className="rounded-[1rem] w-[15rem] h-[30rem]"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={pic8}
+                    className="rounded-[1rem] w-[15rem] h-[30rem]"
+                  />
+                </div>
+              </Carousel>
+            </div>
+            <div className="text-[#ffffff] text-center glow m-[2rem] text-[1.3rem]  md:w-[50%] w-[90%]">
+              <p>
+                Not a visual symptom?No worries!Just describe your symptoms and
+                let HealMate take care of the rest
+              </p>
+              <span className="flex justify-center items-center ">
+                <img src={camera} alt="img" className="w-[4rem]" />
+                <NavLink to="/disease" className="underline">Try it out</NavLink>
+              </span>
+            </div>
+          </div>
         </div>
-        <motion.p
-          className="join italic text-[#ffffff] text-center w-screen mt-[1.5rem] para"
+        <motion.div
+          className="text-[1.5rem] italic text-[#ffffff] text-center w-screen mt-[1.5rem] z-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
           <Marquee pauseOnHover={true} autoFill={true}>
-          Join us and discover the power of AI-Powered Diagnosis
-          
-          ,redefining the way you approach wellness.{"  "}
+            Join us and discover the power of AI-Powered Diagnosis ,redefining
+            the way you approach wellness.{"  "}
           </Marquee>
-        </motion.p>
+        </motion.div>
       </div>
     </div>
   );

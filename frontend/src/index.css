@@ -12,6 +12,10 @@ body {
   overflow-x: hidden;
   font-family: "Roboto Mono", monospace;
 }
+.loader {
+  background: url("./assets/back.png");
+  background-size: cover;
+}
 .content {
   font-family: "Roboto Mono", monospace;
   text-shadow: 2px 2px 8px #00ff29;
@@ -31,15 +35,26 @@ body {
   text-shadow: 2px 2px 8px #00ff29;
 }
 .homebtn {
+  background-image: url("./assets/bgGradient.png");
+  background-size: cover;
+  background-position: center;
+}
+.imgbtn {
   background-image: url("./assets/back.png");
   background-size: cover;
   background-position: center;
+}
+.error {
+  background: url("../src/assets/errorpage.png");
+  background-size: cover ;
+  background-position: center;
+  font-family: "Roboto Mono", monospace;
 }
 .refer {
   font-family: "Roboto Mono", monospace;
 }
 .refer:hover {
-  box-shadow: 1px 2px 20px 10px black;
+  box-shadow: 1px 2px 20px 5px black;
 }
 
 a {
@@ -80,9 +95,15 @@ a:hover .hov {
   box-shadow: 1px 2px 10px 5px #00ff29;
   border-radius: 1rem;
 }
+.glow{
+  text-shadow: 5px 5px 7px #89ea99;
+}
 
 .f {
   animation: animate 2s linear infinite alternate-reverse;
+}
+.leftSection {
+  margin-right: auto;
 }
 @keyframes animate {
   from {
@@ -127,7 +148,7 @@ a:hover .hov {
   animation-duration: 2s;
   animation-direction: alternate-reverse;
   animation-iteration-count: infinite;
-  animation-delay: 3.5s;
+  animation-delay: 3s;
 }
 @keyframes hoverAnimation {
   from {
@@ -145,4 +166,20 @@ a:hover .hov {
     rgba(0,255,41,0.6),
     rgba(35, 183, 64,0)
   );
+  
+}
+.glass_one {
+  box-shadow: 1px 2px 10px 5px black;
+  transform: translateZ(1000px);
+  backdrop-filter: blur(10px) saturate(200%);
+  -webkit-backdrop-filter: blur(10px) saturate(200%);
+  background: linear-gradient(
+    to bottom right,
+    rgba(5, 235, 43, 0.5),
+    rgba(35, 183, 64,0)
+  );
+  
+}
+.b-shadow{
+  box-shadow: 1px 2px 10px 2px black;
 }
