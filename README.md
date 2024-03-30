@@ -52,6 +52,6 @@ Tired of endless doctor visits and vague diagnoses? Introducing HealMate, the cu
 
 [Click here to view a live demo](https://your-app-url.com).
 
-### Join the Revolution
+### Contributors
 
-Revolutionize your healthcare experience with HealMate. Empower yourself with accurate diagnoses and timely access to expert medical care. Together, we can make health a breeze!
+<img src="https://contributors-img.web.app/image?repo=Agnik7/HealMate" />
